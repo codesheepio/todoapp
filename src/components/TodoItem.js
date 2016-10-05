@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react'
 
-const TodoItem = ({text, complete}) => (
-  <li className={complete?'complete':''}>{text}</li>
+const TodoItem = ({text, complete, toggleStatus}) => (
+  <li onClick={ () => { toggleStatus(text) } } className={complete?'complete':''}>{text}</li>
 )
 
 TodoItem.propTypes = {
